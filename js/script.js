@@ -4,7 +4,6 @@ const titleClickHandler = function(event){
     console.log('Link was clicked');
     
     /* remove class 'active' from all article links */
-    
     const activeLinks = document.querySelectorAll('.titles a.active');
     
     for(let activeLink of activeLinks){
@@ -12,12 +11,10 @@ const titleClickHandler = function(event){
     }
     
     /* add class 'active' to the clicked link */
-    
     const clickedLink = clickedElement.classList.add('active');
     console.log('clickedElement:', clickedElement);
     
     /* remove class 'active' from all articles */
-    
     const activeArticles = document.querySelectorAll('.post.active');
     
     for(let activeArticle of activeArticles){
@@ -25,22 +22,43 @@ const titleClickHandler = function(event){
     }
     
     /* get 'href' attribute from the clicked link */
-    
     const clickedArticle = clickedElement.getAttribute('href');
     console.log('clickedArticle:', clickedArticle);
     
     /* find the correct article using the selector (value of 'href' attribute) */
-    
     const foundArticle = document.querySelector(clickedArticle);
     console.log('clicked article:', foundArticle);
     
     /* add class 'active to the correct article */
-    
     foundArticle.classList.add('active');
 }
 
 const links = document.querySelectorAll('.titles a');
+console.log('links:', links);
 
 for(let link of links){
     link.addEventListener('click', titleClickHandler);
 };
+
+{    
+const optTitleListSelector = '.titles',
+      optArticleSelector = '.post',
+      optTitleSelector = '.post-title';
+
+function generateTitleLinks (){
+    console.log('wywołałem funkcję generateTitliLinks');
+    
+    /* [DONE] remove contents of titleList */
+    const titleList = document.querySelector(optArticleSelector).innerHTML = '';
+        console.log('wyczyściłem listę linków');
+    
+    /* for each article */
+        /* get the article id */
+        /* find the title element */
+        /* get the title from title element */
+        /* create HTML of link */
+        /* insert link into titleList */
+    
+}
+generateTitleLinks();
+}

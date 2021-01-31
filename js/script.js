@@ -90,6 +90,7 @@ function generateTags(){
 
     /* [DONE] make html variable with empty string */
     let html = '';
+    console.log('Kod html jest teraz:', html);
 
     /* [DONE] get tags from data-tags attribute */
     const articleTags = article.getAttribute('data-tags');
@@ -98,12 +99,13 @@ function generateTags(){
     /* [DONE] split tags into array */
     const splitedArticleTags = articleTags.split(' ');
     console.log('3. Splited tags to:', splitedArticleTags);
+    //const articleTag = splitedArticleTags.querySelectorAll()
 
     /* [DONE] START LOOP: for each tag */
     for (let articleTag of splitedArticleTags) {
 
-      /* [IN PROGRESS] generate HTML of the link */
-      const linkHTML = '<li><a href="#"><span>' + articleTag + '</span></a></li>';
+      /* [DONE] generate HTML of the link */
+      const linkHTML = '<li><a href="#tag-' + articleTag + '"><span>' + articleTag + '</span></a></li>';
       console.log('3a. Kod linka taga to:', linkHTML);
 
       /* [DONE] add generated code to html variable */
@@ -113,7 +115,7 @@ function generateTags(){
     /* [DONE] END LOOP: for each tag */
     }
 
-    /* [IN PROGRESS] insert HTML of all the links into the tags wrapper */
+    /* [DONE] insert HTML of all the links into the tags wrapper */
     tagsWrapper.innerHTML = html;
     console.log('4. tagsWrapper to:', tagsWrapper);
 

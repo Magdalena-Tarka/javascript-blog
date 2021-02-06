@@ -103,25 +103,31 @@ body {
 
 .list.tags {
     display: inline-block;
-    .tag-size-1 {
-        font-size: 16px;
-        color: chocolate;
-    }
-    .tag-size-2 {
-        font-size: 18px;
-        color: darkblue;
-    }
-    .tag-size-3 {
-        font-size: 20px;
-        color: cornflowerblue;
-    }
-    .tag-size-4 {
-        font-size: 22px;
-        color: darkmagenta;
-    }
-    .tag-size-5 {
-        font-size: 24px;
-        color: cadetblue;
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            .tag-size-1 {
+                font-size: 16px;
+                color: chocolate;
+            }
+            .tag-size-2 {
+                font-size: 18px;
+                color: darkblue;
+            }
+            .tag-size-3 {
+                font-size: 20px;
+                color: cornflowerblue;
+            }
+            .tag-size-4 {
+                font-size: 22px;
+                color: darkmagenta;
+            }
+            .tag-size-5 {
+                font-size: 24px;
+                color: cadetblue;
+            }
+        }
     }
 }
 
@@ -133,8 +139,12 @@ a {
 /* Authors */
 
 .authors {
-    li {
-        margin-bottom: 12px;
+    ul {
+        padding: 0;
+        li {
+            margin-bottom: 12px;
+            list-style-type: none;
+        }
     }
 }
 

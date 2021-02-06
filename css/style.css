@@ -90,27 +90,35 @@ body {
   display: inline-block;
 }
 
-.list.tags .tag-size-1 {
+.list.tags ul {
+  padding: 0;
+}
+
+.list.tags ul li {
+  list-style-type: none;
+}
+
+.list.tags ul li .tag-size-1 {
   font-size: 16px;
   color: chocolate;
 }
 
-.list.tags .tag-size-2 {
+.list.tags ul li .tag-size-2 {
   font-size: 18px;
   color: darkblue;
 }
 
-.list.tags .tag-size-3 {
+.list.tags ul li .tag-size-3 {
   font-size: 20px;
   color: cornflowerblue;
 }
 
-.list.tags .tag-size-4 {
+.list.tags ul li .tag-size-4 {
   font-size: 22px;
   color: darkmagenta;
 }
 
-.list.tags .tag-size-5 {
+.list.tags ul li .tag-size-5 {
   font-size: 24px;
   color: cadetblue;
 }
@@ -121,8 +129,13 @@ a {
 }
 
 /* Authors */
-.authors li {
+.authors ul {
+  padding: 0;
+}
+
+.authors ul li {
   margin-bottom: 12px;
+  list-style-type: none;
 }
 
 /* Post */
